@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/sidebar-header.css">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="icon" href="Images/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
@@ -15,7 +14,6 @@
     <script src="js/sidebar-toggle.js" defer></script>
     <script src="js/modal.js" defer></script>
     <script src="js/slider.js" defer></script>
-    <script src="js/modallogin.js" defer></script>
 </head>
 
 <body>
@@ -23,8 +21,9 @@
         <header class="header">
             <div class="inner_header">
                 <div class="header_left">
-                    <div class="greeting login">
-                        <button type="button" class="LoginBtn">SignIn/SignUp</button>
+                    <div class="greeting">
+                        <p class="greeting-text">Welcome,</p>
+                        <p class="player-name">Player</p>
                     </div>
                 </div>
                 <div class="header_center">
@@ -51,7 +50,7 @@
                 <a href="#">Team</a>
                 <a href="#">Tournaments</a>
                 <a href="#">FAQ</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="#">Contacts</a>
             </nav>
         </div>
         <div class="content">
@@ -202,34 +201,8 @@
         </footer>
     </div>
 
-    <div class="signin-signup signin-signup-hidden">
-        <div class="login-wrapper login-hidden">
-            <span class="closeBtnlog">&times;</span>
-            <p>Login</p>
-            <form action="submit" method="post" class="login-form" id="login">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <input type="submit" value="Sign In">
-            </form>
-            <span class="redirect">Not registered? <a href="#" class="Signupbtn">Sign up</a></span>
-        </div>
-        <div class="register-wrapper register-hidden">
-            <span class="closeBtnreg">&times;</span>
-            <p>Register</p>
-            <form action="submit" method="post" class="register-form" id="register">
-                <input type="text" placeholder="Username">
-                <input type="email" placeholder="E-Mail">
-                <input type="password" placeholder="Password">
-                <input type="submit" value="Sign Up">
-            </form>
-            <span class="redirect">Already registered? <a href="#" class="Signinbtn">Sign in</a></span>
-        </div>
-    </div>
-
     <div class="modal" id="modal">
         <span class="closeBtn">&times;</span>
-        <img src="#" class="modal-img" id="modalimg" alt="screenshot">
-
     </div>
 </body>
 

@@ -41,9 +41,10 @@ body {
 }
 
 .contact-form input,
+.ContactBtn,
 .contact-form textarea {
     padding: 10px 10px;
-    margin-bottom: 60px;
+    margin-bottom: 35px;
     background: #5C5C5C;
     border-radius: 25px;
     color: #ffffff;
@@ -61,7 +62,7 @@ body {
     outline: none;
 }
 
-.contact-form input[type=submit] {
+.ContactBtn {
     min-width: 200px;
     align-self: center;
     width: 50%;
@@ -76,9 +77,10 @@ body {
 .contact-form input[type=email]:focus,
 .contact-form textarea:focus {
     background: #3b3b3b;
+    border: 1px solid #979696;
 }
 
-.contact-form input[type=submit]:hover {
+.ContactBtn:hover {
     color: #9e9e9e;
     background: #333333;
 }

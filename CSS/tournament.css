@@ -1,0 +1,104 @@
+.content-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tour-title {
+    position: relative;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+
+    color: #FFFFFF;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 35px 0;
+    grid-gap: 20px;
+}
+
+.tour-title::after {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #3A3939;
+}
+
+
+.tour-items {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 9.5%;
+}
+
+.tour-image {
+    min-width: 400px;
+}
+
+.tour-description {
+    padding: 10px 10px 10px 10px;
+    background: rgba(87, 87, 87, 0.9);
+    border-width: 0px 1px 1px 1px;
+    border-color: #000000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.tour-name {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+
+    color: #FFFFFF;
+}
+
+.description-item p {
+    margin: 0;
+    padding: 0;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    
+    color: #9A9A9A;
+
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tour-places {
+    float: right;
+}
+
+.tour-date {
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+
+
+    color: #FFFFFF;
+}
+

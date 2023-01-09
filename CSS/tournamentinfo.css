@@ -1,0 +1,273 @@
+.tournament-info,
+.tournament-brackets {
+    margin: 90px 95px 95px;
+}
+
+.info-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: rgba(72, 70, 70, 0.5);
+    border: 1px solid #3F3838;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+
+    padding-top: 40px;
+}
+
+.tournament-info-title,
+.tournament-brackets-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.7vh;
+    
+    color: #FFFFFF;
+}
+
+.tournament-image {
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.tournament-middle {
+    margin-right: 25px;
+}
+
+.tournament-title {
+    display: inline;
+}
+
+hr {
+    width: 100%;
+    border-color: #AAA8A8;
+    background-color: #AAA8A8;
+    color: #AAA8A8;
+}
+
+.middle-bottom-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tournament-name {
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3vh;
+
+    color: #FFFFFF;
+}
+
+.tournament-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-bottom-info {
+    margin-top: 50px;
+}
+
+.tournament-prizepool p,
+.tournament-playercount p {
+    text-align: center;
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+
+    color: #9A9A9A;
+}
+
+.join-tournament {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.join-tournament input[type=submit] {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 10px;
+    font-size: 1.9vh;
+    border-radius: 25px;
+    min-width: 100px;
+    width: 15%;
+    color: #ffffff;
+    margin-bottom: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.join-tournament input[type=submit]:hover {
+    color: #9e9e9e;
+    background: #333333;
+}
+
+.tournament-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.vl {
+    border-left: 1px solid #AAA8A8;
+    height: 80%;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.date-info {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    margin: 0 auto;
+
+    color: #FFFFFF;
+}
+
+.date-info p {
+    text-align: center;
+    margin: 0;
+}
+
+.tournament-startdate {
+    margin-top: 25%;
+    margin-bottom: 40%;
+}
+
+/* brackets */
+
+.brackets {
+    background: rgba(54, 54, 54, 0.68);
+    border: 1px solid #2E2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 20px 50px;
+}
+
+.round-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+
+    color: #6F6C6C;
+    margin-bottom: 30px;
+}
+
+.brackets {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.round1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.team {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: #848484;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px;
+    min-width: 50px;
+    min-width: 200px;
+}
+
+.match:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.round2 {
+    margin-top: 80px;
+}
+
+.round2 .match:not(:last-child) {
+    margin-bottom: 200px;
+}
+
+.round3 {
+    margin-top: 220px;
+}
+
+.round3 .match:not(:last-child) {
+    margin-bottom: 500px;
+}
+
+.round4 {
+    margin-top: 37%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .grid-wrap {
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    }
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .header_right p {
+        display: none;
+    }
+
+    .toggle-hidden {
+        display: inline;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    .sidebar {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .sidebar-logo img {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .grid-wrap {
+    grid-template-areas: 
+        "header header"
+        "sidebar sidebar"
+        "main main"
+        "footer footer";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+   
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+
+@media only screen and (max-width: 576px) {
+    
+}

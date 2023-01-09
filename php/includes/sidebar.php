@@ -20,4 +20,14 @@
     <a href="contact.php" class="<?php if ($page == 'contact') {
         echo 'active';
     } ?>">Contact Us</a>
+
+<?php if (isset($_SESSION["ID"])) {
+    // Check if the user is an admin
+        if ($_SESSION["Admin"] == 1) { ?>
+            <a href="admin.php" class="<?php if ($page == 'admin') {
+            echo 'active';
+            } ?>">&#9881; Admin</a>
+        <?php }
+    mysqli_close($conn);
+} ?>
 </nav>

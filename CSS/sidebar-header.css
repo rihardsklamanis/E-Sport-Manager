@@ -135,7 +135,7 @@ input {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.greeting {
+.greeting-container {
     margin: 0 auto;
 }
 
@@ -149,22 +149,57 @@ input {
     display: none;
 }
 
-.greeting {
+.greeting-container,
+.LoginBtn {
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 0px;
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: calc(10px + 0.90vh);
-    line-height: 23px;
 
     color: #FFFFFF;
 }
 
+.greeting-text {
+    margin: 0;
+}
+
 .player-name {
+    margin: 0;
     margin-left: 5px;
     color: #DF1515;
+}
+
+.Profile_Button {
+    margin-left: 8%;
+    color: rgb(144, 153, 177);
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(10px + 0.90vh);
+}
+
+.logout-form {
+    display: inline-block;
+}
+
+.logout-btn {
+    margin-left: 30%;
+    background-color: transparent;
+    color: #637cc0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(10px + 0.90vh);
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    color: #1c465e;
 }
 
 .header_center {
@@ -180,7 +215,7 @@ input {
     margin-right: 35px;
 }
 
-.header_right p {
+.header_right a {
     margin-right: 165px;
 
     font-family: 'Roboto', sans-serif;
@@ -194,7 +229,7 @@ input {
     cursor: pointer;
 }
 
-.header_right p:hover {
+.header_right a:hover {
     color: #08415a;
     transition: 0.3s;
 }
@@ -264,41 +299,55 @@ input {
 
 /* SingIn/SignUp */
 
-.signin-signup {
-    margin-top: 65px;
-    margin-left: 25px;
-    position:absolute;
+
+.login-wrapper,
+.register-wrapper {
+    display: none;
+    position: fixed;
+    z-index: 1;
     top:0;
     left:0;
-    background: rgba(31, 33, 30, 0.99);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    width: auto;
-    height: auto;
-}
-
-.login-hidden {
-    display: none;
-}
-
-.register-hidden {
-    display: none;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
 }
 
 .login-form {
     display: block;
 }
 
+.login-form-wrapper,
+.register-form-wrapper {
+    margin-top: 5%;
+    background-color: #252525;
+    border: 1px solid #292626;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 25px;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
 .login-form,
 .register-form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
     font-size:  2.47vh;
-    margin: 25px 25px 25px 25px;
+    width: 60%;
 }
 
 .signin-signup p {
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 70px;
     text-align: center;
-    font-size:  2.47vh;
+    font-size:  3.47vh;
 }
 
 .login-form,
@@ -310,8 +359,9 @@ input {
 
 .login-form input,
 .register-form input {
+    padding: 7px 5px 7px 10px;
     border: 1px solid #1C1B1F;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .login-form input::placeholder,
@@ -321,7 +371,15 @@ input {
 
 .login-form input,
 .register-form input {
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 10px;
+    width: 100%;
+}
+
+.login-form input[type="submit"]:hover,
+.register-form input[type="submit"]:hover {
+    
 }
 
 .closeBtnlog,
@@ -344,6 +402,7 @@ span .redirect {
 }
 
 .redirect {
+    margin-top: 25px;
     margin-left: 5px;
     font-size:  1.5vh;
     align-self: center;
@@ -374,6 +433,13 @@ span .redirect {
 
 
 @media only screen and (max-width: 992px) {
+
+    .login-form-wrapper,
+    .register-form-wrapper {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .header_right p {
         display: none;
     }
@@ -416,6 +482,12 @@ span .redirect {
 
     .header_right p {
         display: none;
+    }
+
+    .login-form-wrapper,
+    .register-form-wrapper {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 }

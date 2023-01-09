@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <title>Contact Us : E-Sport Manager</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../js/sidebar-toggle.js" type="text/javascript" defer></script>
-    <script src="../js/modallogin.js" type="text/javascript" defer></script>
+    <script src="JS/sidebar-toggle.js" type="text/javascript" defer></script>
+    <script src="JS/modallogin.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -37,12 +37,17 @@
 
             <div class="form-wrapper">
 
-                <form method="post" action="mail.php" class="contact-form" id="contact">
+                <form method="post" action="php/classes/mail.php" class="contact-form" id="contact">
                     <label for="username">Username</label>
-                    <input id="username" name="username" type="text" required>
-
-                    <label for="email">E-Mail</label>
-                    <input id="email" name="email" type="email" required>
+                    <?php if (isset($_SESSION["ID"])) { ?>
+                        <input id="username" name="username" type="text" value="<?php echo $_SESSION["Username"] ?>" readonly>
+                        <label for="email">E-Mail</label>
+                        <input id="email" name="email" type="email" value="<?php echo $_SESSION["Email"] ?>" readonly>
+                    <?php } else { ?>
+                        <input id="username" name="username" type="text" required>
+                        <label for="email">E-Mail</label>
+                        <input id="email" name="email" type="email" required>
+                    <?php } ?>
 
                     <label for="subject">Subject</label>
                     <input id="subject" name="subject" type="text" required>
@@ -62,6 +67,7 @@
     </div>
 
     <?php include 'php/includes/signup.php' ?>
+    <?php include 'php/includes/preloader.php' ?>   
 
 </body>
 

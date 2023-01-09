@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <title>FAQ : E-Sport Manager</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../js/sidebar-toggle.js" type="text/javascript" defer></script>
-    <script src="../js/modallogin.js" type="text/javascript" defer></script>
-    <script src="../js/accordion.js" type="text/javascript" defer></script>
+    <script src="JS/sidebar-toggle.js" type="text/javascript" defer></script>
+    <script src="JS/modallogin.js" type="text/javascript" defer></script>
+    <script src="JS/accordion.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -36,8 +36,7 @@
                 </div>
                 <div class="accordion-wrapper">
                     <div class="accordion-item">
-                        <button class="accordion">Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse?</button>
+                        <button class="accordion">How to start?</button>
                         <div class="panel">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut
@@ -165,7 +164,7 @@
                         contact
                         us. We will answer to you shortly!</p>
                 </div>
-                <button class="redirect-button"><a href="contact.html">Contact Us</a></button>
+                <a href="contact.php"><button class="redirect-button">Contact Us</button></a>
             </section>
         </div>
         <footer class="footer">
@@ -174,6 +173,7 @@
     </div>
 
     <?php include 'php/includes/signup.php' ?>
+    <?php include 'php/includes/preloader.php' ?>   
 
 </body>
 

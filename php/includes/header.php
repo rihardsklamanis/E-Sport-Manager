@@ -5,10 +5,15 @@
             session_start();
             if (isset($_SESSION["ID"])) {
             ?>
-            <p class="greeting-text">Welcome,</p>
-            <p class="player-name">
-                <?php echo $_SESSION["Username"]; ?>
-            </p>
+            <div class="greeting-container">
+                <p class="greeting-text">Welcome,</p>
+                <p class="player-name">
+                   <?php echo $_SESSION["Username"]; ?>
+                </p>
+            </div>
+            <form class="logout-form" action="php/includes/logout.php" method="POST">
+                <input type="Submit" class="logout-btn" value="Logout">
+            </form>
             <?php
             } else {
             ?>
@@ -23,9 +28,7 @@
             class="sidebar-toggle toggle-hidden">
     </div>
     <div class="header_right">
-        <a href="">
-            <p>Download game</p>
-        </a>
+        <a href="/Download/ExampleOfDownload.txt" class="download-link" download>Download game</a>
         <div class="Header-Logo">
             <img src="Images/ESM-Header.png" alt="ESM-Logo" class="logo-header">
         </div>

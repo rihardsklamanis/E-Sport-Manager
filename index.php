@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <title>ESM : E-Sport Manager</title>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../js/sidebar-toggle.js" type="text/javascript" defer></script>
-    <script src="../js/modal.js" type="text/javascript" defer></script>
-    <script src="../js/slider.js" type="text/javascript" defer></script>
-    <script src="../js/modallogin.js" type="text/javascript" defer></script>
-    <script src="../js/countdown.js" type="text/javascript" defer></script>
+    <script src="JS/sidebar-toggle.js" type="text/javascript" defer></script>
+    <script src="JS/modal.js" type="text/javascript" defer></script>
+    <script src="JS/slider.js" type="text/javascript" defer></script>
+    <script src="JS/modallogin.js" type="text/javascript" defer></script>
+    <script src="JS/countdown.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -95,75 +95,15 @@
                             <h2>News</h2>
                         </div>
                         <div class="show-all">
-                            <a href="#">Show All</a>
+                            <a href="allnews.php">Show All</a>
                             <img src="Images/Show-All.svg" alt="Show All">
                         </div>
                     </div>
                     <div class="news-items">
-                        <div class="news-item">
-                            <div class="news-item-container">
-                                <div class="news-item-top">
-                                    <div class="news-item-title">
-                                        <a href="#">News Title</a>
-                                    </div>
-                                    <div class="news-item-date">
-                                        23.09.2022
-                                    </div>
-                                </div>
-                                <div class="news-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.... <span>Read More</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-item">
-                            <div class="news-item-container">
-                                <div class="news-item-top">
-                                    <div class="news-item-title">
-                                        <a href="#">News Title</a>
-                                    </div>
-                                    <div class="news-item-date">
-                                        23.09.2022
-                                    </div>
-                                </div>
-                                <div class="news-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.... <span>Read More</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-item">
-                            <div class="news-item-container">
-                                <div class="news-item-top">
-                                    <div class="news-item-title">
-                                        <a href="#">News Title</a>
-                                    </div>
-                                    <div class="news-item-date">
-                                        23.09.2022
-                                    </div>
-                                </div>
-                                <div class="news-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.... <span>Read More</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-item">
-                            <div class="news-item-container">
-                                <div class="news-item-top">
-                                    <div class="news-item-title">
-                                        <a href="#">News Title</a>
-                                    </div>
-                                    <div class="news-item-date">
-                                        23.09.2022
-                                    </div>
-                                </div>
-                                <div class="news-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.... <span>Read More</span>
-                                </div>
-                            </div>
-                        </div>
+                    <?php include 'php/classes/dbh.classes.php';
+                            include 'php/classes/news.classes.php';
+                            $n = new News();
+                            $n->getLatestNews(); ?>
                     </div>
                 </div>
             </section>
@@ -209,11 +149,11 @@
     </div>
 
     <?php include 'php/includes/signup.php' ?>
+    <?php include 'php/includes/preloader.php' ?>   
 
     <div class="modal" id="modal">
         <span class="closeBtn">&times;</span>
         <img src="#" class="modal-img" id="modalimg" alt="screenshot">
-
     </div>
 </body>
 
